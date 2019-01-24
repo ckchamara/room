@@ -1,6 +1,7 @@
 package com.example.androroom;
 
 import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
@@ -13,4 +14,7 @@ public interface MyDao {
 
     @Query("select * from User")
     public List<User> getUsers();
+
+    @Delete
+    public void deletUsers(User user);
 }

@@ -59,6 +59,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container,new ReadUserFragment()).
                         addToBackStack(null).commit();
                 break;
+
+            case R.id.delete_button:
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container,new DeleteUserFragment()).
+                        addToBackStack(null).commit();
+                break;
         }
     }
 }
